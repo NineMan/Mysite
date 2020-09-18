@@ -1,1 +1,1 @@
-web: gunicorn medtehsite.wsgi
+web: gunicorn mysite.wsgi
