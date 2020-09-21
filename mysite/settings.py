@@ -140,7 +140,7 @@ print('STATICFILES_DIRS =', STATICFILES_DIRS)
 print('===============================================')
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'     # сжатие + кеширование
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'             # сжатие без кеширования
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'             # сжатие без кеширования
 
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
