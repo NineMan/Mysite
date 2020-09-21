@@ -145,3 +145,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'         
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
 django_heroku.settings(locals())
+
