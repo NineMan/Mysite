@@ -127,4 +127,6 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+DEBUG_PROPAGATE_EXCEPTIONS = True
+
 django_heroku.settings(locals())
