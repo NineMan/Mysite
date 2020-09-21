@@ -132,6 +132,12 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+print('===============================================')
+print('STATIC_URL =', STATIC_URL)
+print('STATIC_ROOT =', STATIC_ROOT)
+print('STATICFILES_DIRS =', STATICFILES_DIRS)
+print('===============================================')
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEBUG_PROPAGATE_EXCEPTIONS = True
