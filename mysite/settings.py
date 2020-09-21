@@ -126,7 +126,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = BASE_DIR + '/' + 'staticfiles'
+# STATIC_ROOT = BASE_DIR + '/' + 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
@@ -138,7 +139,8 @@ print('STATIC_ROOT =', STATIC_ROOT)
 print('STATICFILES_DIRS =', STATICFILES_DIRS)
 print('===============================================')
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'     # сжатие + кеширование
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'             # сжатие без кеширования
 
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
