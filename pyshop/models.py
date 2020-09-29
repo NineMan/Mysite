@@ -30,6 +30,12 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-# def live_search(request, template_name="shop/livesearch_results.html"):
-#     q = request.GET.get("q", "")
-#     # ...
+
+def live_search(request, template_name="shop/livesearch_results.html"):
+    q = request.GET.get("q", "")
+    sku = Product.objects.filter(sku__contains=q)
+    name = Product.objects.filter(name__contains=q)
+    description = Product.objects.filter(description__contains=q)
+    answer = sku.union(name)
+    answer = answer.union(description)
+    print(answer)
