@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+  </head>
+
+  <body>
+
+    Привет search
+
+    <ul>
+    {% for product in product_list %}
+      <li>
+        {{ product.name }} -{{ product.description }} - {{ product.sku }}
+      </li>
+    {% endfor %}
+    </ul>
+
+  </body>
+</html>
