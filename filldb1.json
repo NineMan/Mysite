@@ -1,0 +1,31 @@
+[
+  {"model": "pyshop.category", "pk": 1, "fields": {"name": "Smartfons", "slug": "smartfons"}},
+  {"model": "pyshop.category", "pk": 2, "fields": {"name": "Cars", "slug": "cars"}},
+  {
+    "model": "pyshop.product",
+    "pk": 1,
+    "fields": {
+      "sku": "1111",
+      "price": "101.0000",
+      "slug": "samsung1",
+      "name": "Samsung1",
+      "title": "Smartfon Samsung1",
+      "description": "New smartfon samsung1",
+      "categories": [1],
+      "related_products": [1]
+    }
+  },
+  {
+    "model": "pyshop.product",
+    "pk": 2,
+    "fields": {
+      "sku": "q",
+      "price": "102.0000",
+      "slug": "samsung2",
+      "name": "Samsung2", "title": "Smartfon Samsung2",
+      "description": "New smartfon samsung2",
+      "categories": [1],
+      "related_products": [1]
+    }
+  },
+  {"model": "pyshop.product", "pk": 3, "fields": {"sku": "query", "price": "103.0000", "slug": "samsung3", "name": "Samsung3", "title": "Smartfon Samsung3", "description": "New smartfon samsung3", "categories": [], "related_products": []}}]
