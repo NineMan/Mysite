@@ -1,4 +1,6 @@
 from django.db import models
+from django.core import serializers
+from django.http import HttpResponse
 
 
 class Category(models.Model):
@@ -31,11 +33,13 @@ class Product(models.Model):
         return self.name
 
 
-def live_search(request, template_name="shop/livesearch_results.html"):
+@classmethod
+def live_search(request, template_name="pyshop/livesearch_results.html"):
     q = request.GET.get("q", "")
     sku = Product.objects.filter(sku__contains=q)
     name = Product.objects.filter(name__contains=q)
     description = Product.objects.filter(description__contains=q)
     answer = sku.union(name)
     answer = answer.union(description)
-    print(answer)
+    data = serializers.serialize('json', answer)
+    return HttpResponse(data, content_type='application/json')
